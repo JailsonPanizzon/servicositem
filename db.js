@@ -9,16 +9,16 @@ const bodyParser = require("body-parser"); // turns response into usable format
 const cors = require("cors"); // allows/disallows cross-site communication
 const morgan = require("morgan"); // logs requests
 
-// db Connection w/ Heroku
-// const db = require('knex')({
-//   client: 'pg',
-//   connection: {
-//     connectionString: process.env.DATABASE_URL,
-//     ssl: true,
-//   }
-// });
+//db Connection w/ Heroku
+const db = require('knex')({
+  client: 'pg',
+  connection: {
+    connectionString: process.env.DATABASE_URL,
+    ssl: true,
+  }
+});
 
-//db Connection w/ localhost
+/*db Connection w/ localhost
 var db = require("knex")({
   client: "pg",
   connection: {
@@ -28,7 +28,7 @@ var db = require("knex")({
     database: "Oficina"
   }
 });
-
+*/
 // Controllers - aka, the db queries
 const main = require("./controller/main.js");
 
