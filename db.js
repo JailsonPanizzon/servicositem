@@ -36,7 +36,7 @@ const main = require("./controller/main.js");
 const app = express();
 
 // App Middleware
-const whitelist = ["http://localhost:3000", "https://sitem-frontend.herokuapp.com/"];
+const whitelist = ["http://localhost:3000", "https://sitem-frontend.herokuapp.com"];
 const corsOptions = {
   origin: function(origin, callback) {
     if (whitelist.indexOf(origin) !== -1 || !origin) {
