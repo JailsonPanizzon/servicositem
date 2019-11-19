@@ -185,5 +185,6 @@ app.post("/relatorio408", (req, res) => main.relatorio408(req, res, db));
 
 // App Server Connection
 app.listen(process.env.PORT || 3002, () => {
+  console.log(`Data base url: ${process.env.DATABASE_URL}`)
   console.log(`Rodando aplicação na porta: ${process.env.PORT || 3002}`);
 });
